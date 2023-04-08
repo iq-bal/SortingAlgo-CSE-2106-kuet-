@@ -37,6 +37,16 @@ void mergeSort(int arr[],int l, int h){
     }
 }
 
+void printArray(int *arr, int n){
+    for (int i = 0; i < n; i++)
+    {
+        cout<< arr[i]<<" ";
+    }
+    cout<< endl; 
+}
+
 int main(){
-    
+    int a[5]= {5,1,3,2,4};
+    mergeSort(a,0,4);
+    printArray(a,5);
 }
