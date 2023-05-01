@@ -5,16 +5,17 @@
 using namespace std;
 
 int partition(int arr[],int l ,int h){
-    int pivot = arr[h];
-    int i = l-1;
-    for (int j = l; j < h; j++)
+    int pivot = arr[l];
+    int i = l+1;
+    for (int j = l+1; j <= h; j++)
     {
         if(arr[j]<pivot){
-            swap(arr[++i],arr[j]);
+            swap(arr[i],arr[j]);
+            i++; 
         }
     }
-    swap(arr[++i],arr[h]); 
-    return i; 
+    swap(arr[l],arr[i-1]); 
+    return i-1; 
 }
 
 void quickSort(int arr[],int l, int h){
